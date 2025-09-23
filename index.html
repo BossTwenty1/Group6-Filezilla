@@ -685,6 +685,13 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+        window.addEventListener("click", () => {
+    const audio = document.getElementById("bg-music");
+    audio.muted = false;
+    audio.currentTime = 0; // always restart from top
+    audio.play();
+  }, { once: true }); 
     </script>
 </body>
+
 </html>
